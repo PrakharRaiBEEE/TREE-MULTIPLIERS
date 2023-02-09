@@ -18,6 +18,22 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+module fa_df(
+    input a,b,cin,
+    output s,cout
+    );
+    assign s= a^b^cin;
+    assign cout= (a&b)|(b&cin)|(a&cin);
+endmodule
+
+
+module ha_df(
+    input a,b,
+    output s,cout
+    );
+    assign s=a^b;
+    assign cout=a&b;
+endmodule
 
 
 module wtm_4bit_20BEE0082(
